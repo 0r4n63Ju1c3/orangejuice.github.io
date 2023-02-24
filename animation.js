@@ -17,4 +17,5 @@ function outPrint(two){
     );
 }
 
-window.onload = typeWriter('shelltype', 'one');
+//window.onload is antiquated and not needed anymore
+typeWriter('shelltype', 'one');

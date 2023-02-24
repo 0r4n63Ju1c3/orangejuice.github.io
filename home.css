@@ -8,9 +8,9 @@ body {
 }
 
 .bgimg-1 {
-    background-image: url("two.jpg");
+    background-image: url("forest.jpg");
     
-    min-height: 93vh; 
+    min-height: 90vh; 
 
     background-attachment: fixed;
     background-position: center;
@@ -40,4 +40,3 @@ body {
       opacity: 0;
     }
 }
-
