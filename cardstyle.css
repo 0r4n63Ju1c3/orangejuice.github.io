@@ -5,13 +5,30 @@
   padding: 0;
 }
 
+a:visited { 
+    text-decoration: none; 
+    color: #FF800C; 
+}
+
+a {
+    color: #FF800C; 
+}
 
 html {
   font-size: 16px;
 }
 
+.cardIcon {
+  width: 100%;
+  text-align: center;
+}
+.cardIcon img {
+  width: 80px;
+}
+
 body {
-  background: #52a25f;
+  background-image: url("city.jpg");
+  background-size: cover;
   color: #3d3935;
   font-family: futura-pt, sans-serif;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -25,7 +42,7 @@ body {
 }
 .box {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   padding: 15px;
 }
 .box h1 {
@@ -40,9 +57,12 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  row-gap: 20px;
+  flex: 0 1 24%;
 }
 .card {
-  width: 32%;
+ 
+  width: 24%;
   padding: 15px 10px;
   background-color: #fff;
   border-radius: 3px;
@@ -91,3 +111,4 @@ body {
     width: 80%;
   }
 }
+
