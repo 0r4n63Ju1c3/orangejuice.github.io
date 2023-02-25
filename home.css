@@ -9,9 +9,7 @@ body {
 
 .bgimg-1 {
     background-image: url("photos/forest.jpg");
-    
     min-height: 85vh; 
-
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +42,6 @@ body {
 .resume {
   width: 140px;
   height: 45px;
-  font-family: 'Roboto', sans-serif;
   font-size: 11px;
   letter-spacing: 2.5px;
   font-weight: 500;
