@@ -5,13 +5,10 @@
   padding: 0;
 }
 
-a:visited { 
+a{ 
     text-decoration: none; 
-    color: #FF800C; 
-}
-
-a {
-    color: #FF800C; 
+    color: #ffffff75; 
+    font-size: xx-small;
 }
 
 html {
@@ -28,10 +25,14 @@ html {
 
 body {
   background-image: url("photos/leaf.jpg");
-  background-size: cover;
   color: #3d3935;
   font-family: futura-pt, sans-serif;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .93;
 }
 #container {
   display: flex;
@@ -64,11 +65,33 @@ body {
 /*flex: 0 1 24%; */
 .card {
   width: 24%;
+  transition: transform .7s;
+  transform-style:preserve-3d;
+}
+
+.front, .back{
+  height:100%;
   padding: 15px 10px;
   background-color: #fff;
   border-radius: 3px;
-  transition: transform .3s;
+
+  justify-content:center;
+  align-items:center;
+
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
 }
+
+.front{
+  position: absolute;
+  width: 100%;
+}
+
+.back{
+  transform: rotateY(180deg);
+  opacity: 1;
+}
+
 .card a {
   color: inherit;
   text-decoration: none;
@@ -87,7 +110,7 @@ body {
 }
 .card:hover {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, .2);
-	transform: translateY(-4px);
+	transform:rotateY(180deg)
 }
 @media screen and (max-width: 540px) {
   #container {
