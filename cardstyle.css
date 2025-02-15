@@ -117,6 +117,11 @@ body {
   transform: rotateY(180deg);
 }
 
+/* Mobile-Friendly Fix */
+.card:active {
+  transform: rotateY(180deg);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 540px) {
   #container {
@@ -159,4 +164,3 @@ body {
     font-size: 1rem; /* Adjust title size for even smaller screens */
   }
 }
-
