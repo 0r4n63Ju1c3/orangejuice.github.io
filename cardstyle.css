@@ -5,10 +5,10 @@
   padding: 0;
 }
 
-a{ 
-    text-decoration: none; 
-    color: #ffffff75; 
-    font-size: xx-small;
+a {
+  text-decoration: none;
+  color: #ffffff75;
+  font-size: xx-small;
 }
 
 html {
@@ -19,6 +19,7 @@ html {
   width: 100%;
   text-align: center;
 }
+
 .cardIcon img {
   width: 80px;
 }
@@ -27,13 +28,14 @@ body {
   background-image: url("photos/leaf.jpg");
   color: #3d3935;
   font-family: futura-pt, sans-serif;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .93;
 }
+
 #container {
   display: flex;
   justify-content: center;
@@ -41,11 +43,13 @@ body {
   width: 100%;
   height: 100vh;
 }
+
 .box {
   width: 100%;
   max-width: 800px;
   padding: 15px;
 }
+
 .box h1 {
   margin: 10px 0;
   color: inherit;
@@ -53,41 +57,39 @@ body {
   letter-spacing: 2px;
   text-align: center;
 }
+
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   row-gap: 20px;
-  flex: 1 0 50%;
-  
-}
-/*flex: 0 1 24%; */
-.card {
-  width: 24%;
-  transition: transform .7s;
-  transform-style:preserve-3d;
 }
 
-.front, .back{
-  height:100%;
+.card {
+  width: 24%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  margin-bottom: 20px;
+}
+
+.front, .back {
+  height: 100%;
   padding: 15px 10px;
   background-color: #fff;
   border-radius: 3px;
-
-  justify-content:center;
-  align-items:center;
-
-  -webkit-backface-visibility: hidden; 
+  justify-content: center;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.front{
+.front {
   position: absolute;
   width: 100%;
 }
 
-.back{
+.back {
   transform: rotateY(180deg);
   opacity: 1;
 }
@@ -103,15 +105,19 @@ body {
   letter-spacing: 1px;
   text-align: center;
 }
+
 .card-excerpt {
   font-size: .75rem;
   letter-spacing: 1px;
   text-align: center;
 }
+
 .card:hover {
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, .2);
-	transform:rotateY(180deg)
+  transform: rotateY(180deg);
 }
+
+/* Responsive Styles */
 @media screen and (max-width: 540px) {
   #container {
     height: auto;
@@ -120,12 +126,14 @@ body {
     padding: 20px;
   }
   .card {
-    width: 49%;
+    width: 48%;
+    margin-bottom: 20px; /* Add bottom margin for spacing */
   }
 }
+
 @media screen and (max-width: 480px) {
   .box h1 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
   .cards {
     justify-content: center;
@@ -134,4 +142,21 @@ body {
     margin-bottom: 20px;
     width: 80%;
   }
+  .card-title {
+    font-size: 1.1rem; /* Increase title size for readability on small screens */
+  }
+  .card-excerpt {
+    font-size: 0.9rem; /* Increase the font size for better readability */
+  }
 }
+
+@media screen and (max-width: 375px) {
+  /* Additional tweaks for very small screens */
+  .card {
+    width: 90%;
+  }
+  .card-title {
+    font-size: 1rem; /* Adjust title size for even smaller screens */
+  }
+}
+
