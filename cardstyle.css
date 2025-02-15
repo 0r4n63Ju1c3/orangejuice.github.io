@@ -112,13 +112,8 @@ body {
   text-align: center;
 }
 
-.card:hover {
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, .2);
-  transform: rotateY(180deg);
-}
-
-/* Mobile-Friendly Fix */
-.card:active {
+/* Removed hover effect, will be handled by JS */
+.card.flipped {
   transform: rotateY(180deg);
 }
 

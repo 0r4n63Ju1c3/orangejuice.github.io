@@ -161,7 +161,16 @@
         </div>
      </div>
    </div>
-
-    <a href="https://www.flaticon.com/free-icons/hobby" title="hobby icons">Hobby icons created by GOWI - Flaticon</a> <a href="https://www.flaticon.com/free-icons/education" title="education icons">Education icons created by Freepik - Flaticon</a> <a href="https://www.flaticon.com/free-icons/meeting" title="meeting icons">Meeting icons created by Freepik - Flaticon</a>
+  <script>
+  // Select all cards
+  const cards = document.querySelectorAll('.card');
+  // Add event listener for clicks
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+  </script>
+  <a href="https://www.flaticon.com/free-icons/hobby" title="hobby icons">Hobby icons created by GOWI - Flaticon</a> <a href="https://www.flaticon.com/free-icons/education" title="education icons">Education icons created by Freepik - Flaticon</a> <a href="https://www.flaticon.com/free-icons/meeting" title="meeting icons">Meeting icons created by Freepik - Flaticon</a>
   </body>
 </html>
