@@ -16,7 +16,7 @@ function typeWriter(el, two) {
 
 function outPrint(two) {
     const outArray = ['A', 'n', 'd', 'r', 'e', 'w', ' ', 'L', 'e', 'e'];
-    
+
     // Type "Andrew Lee" letter by letter in the second element
     outArray.forEach((letter, i) =>
         setTimeout(() => (document.getElementById(two).innerHTML += letter), 20 * i)
@@ -24,14 +24,6 @@ function outPrint(two) {
 }
 
 window.onload = function () {
-    //run on load
+    // Only call typeWriter once
     typeWriter('shelltype', 'whoamiName');
-   let intervalId = setInterval(() => {
-    // Check if the first element's content is completely typed
-    if (document.getElementById('shelltype').innerHTML === '') {
-        clearInterval(intervalId); // Prevent running if it is already typing
-    } else {
-        typeWriter('shelltype', 'whoamiName');
-    }
-}, 7000);  
 };

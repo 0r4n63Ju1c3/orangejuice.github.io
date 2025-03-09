@@ -52,10 +52,21 @@
             $(this).addClass('vtimeline-content').wrap('<div class="vtimeline-point"><div class="vtimeline-block"></div></div>');
         });
 
-        // Add icons to each block
-        $this.find('.vtimeline-point').each(function() {
-            $(this).prepend('<div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div>');
-        });
+// Add icons to each block
+    $this.find('.vtimeline-point').each(function(index) {
+    // Define an array of PNG image paths (adjust the paths as necessary)
+    var icons = [
+        '/images/afrl.png', // Icon for first block
+        '/images/azure.png', // Icon for second block
+        '/images/airForce.png', // Icon for third block
+    ];
+
+    // Prepend a div for the icon and set the background image
+    $(this).prepend('<div class="vtimeline-icon"></div>');
+    
+    // Set the background image to the corresponding icon
+    $(this).find('.vtimeline-icon').css('background-image', 'url(' + icons[index % icons.length] + ')');
+    });
 
         // Add dates to the timeline if exists
         $this.find('.vtimeline-content').each(function() {
