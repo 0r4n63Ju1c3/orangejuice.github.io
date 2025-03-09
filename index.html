@@ -15,46 +15,12 @@
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
     <div id="lead">
         <div id="lead-content">
-            <h1>Andrew Lee</h1>
-            <h2>Red Teaming</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <h2 id="shelltype">[0r4n63@Ju1c3 ~]# echo $NAME </h2>
+            <h2 id="whoamiName">  </h2>
+            <!-- #add later? - <a href="#" class="btn-rounded-white">Download Resume</a> -->
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
 
         <div id="lead-down">
             <span>
@@ -73,9 +39,9 @@
                 </div>
                 <div class="col-md-8">
                     <p>
- 	Hi! Thank you for visiting my site! My name is Andrew Lee and I'm a nerd for all things computer related. I am currently working 
-        in the IT field. I graduated from a small public school in Colorado where I received a B.S. in Computer Science and Cyber Science. 
-        If I am not working on anything computer related then I am most likely ice skating, cooking or exploring random coffee shops!!
+ 	                Hi! Thank you for visiting my site! My name is Andrew Lee and I'm a nerd for all things computer related. I am currently working 
+                    in the IT field. I graduated from a small public school in Colorado where I received a B.S. in Computer Science and Cyber Science. 
+                    If I am not working on anything computer related then I am most likely ice skating, cooking or exploring random coffee shops!!
                     </p>
                 </div>
             </div>
@@ -86,12 +52,18 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
+            
+            <div class="timeline-entry" data-date="September 2015 – September 2016">
+                <div class="vtimeline-icon timeline-icon-education"></div> <!-- Unique Timeline icon for Education -->
+                <div class="timeline-content">
+                    <h3>Employer Name</h3>
+                    <h4>Job Title</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. 
+                        Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus 
+                        porta quam laoreet placerat.
+                    </p>
+                </div>
             </div>
 
             <div data-date="September 2015 – September 2016">
@@ -116,19 +88,20 @@
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
+            <h3>United States Air Force Academy</h3>
+            <span class="education-date">June 2018 - May 2022</span>
             <h4>Bachelor of Science in Computer Science</h4>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
             </p>
         </div>
+
         <!-- End .education-block -->
 
         <div class="education-block">
             <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <span class="education-date">June 2018 - May 2022</span>
+            <h4>Bachelor of Science in Cyber Sciences</h4>
             <ul>
                 <li>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -218,26 +191,12 @@
     </div>
     <!-- End #skills -->
 
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
+                        Copyright &copy; <span id="current-year">2022</span> Andrew Lee
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -274,6 +233,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script type="text/javascript" src="js/shelltype.js"></script>
 </body>
 
 </html>
