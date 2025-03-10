@@ -56,9 +56,9 @@
     $this.find('.vtimeline-point').each(function(index) {
     // Define an array of PNG image paths (adjust the paths as necessary)
     var icons = [
-        '/images/afrl.png', // Icon for first block
-        '/images/azure.png', // Icon for second block
-        '/images/airForce.png', // Icon for third block
+        '/images/leaf.jpg', // Icon for first block
+        '/images/leaf.jpg', // Icon for second block
+        '/images/leaf.jpg', // Icon for third block
     ];
 
     // Prepend a div for the icon and set the background image

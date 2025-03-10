@@ -40,44 +40,6 @@ body.active {
     content: none
 }
 
-#menu.active {
-    display: block
-}
-
-#mobile-menu-open {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    right: 15px;
-    top: 10px;
-    color: #3498db;
-    font-size: 1.5em;
-    z-index: 20;
-    padding: 0 7px;
-    border-radius: 4px;
-    background: #fff
-}
-
-#mobile-menu-close {
-    display: none;
-    text-align: right;
-    width: 100%;
-    background: #fff;
-    font-size: 1.5em;
-    padding-right: 15px;
-    padding-top: 10px;
-    cursor: pointer;
-    color: #3498db
-}
-
-#mobile-menu-close span {
-    font-size: 0.5em;
-    text-transform: uppercase
-}
-
-#mobile-menu-close i {
-    vertical-align: middle
-}
 
 footer {
     padding: 50px 0
@@ -103,12 +65,14 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #b9bfc4;
+    border: 3px solid #fff;
     text-align: center
 }
 
 .top i {
-    color: #74808a
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    color: #77db34
 }
 
 .social {
@@ -133,7 +97,7 @@ footer {
 }
 
 .social a:hover {
-    color: #3498db
+    color: #77db34
 }
 
 .btn-rounded-white {
@@ -176,21 +140,7 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: #3498db
-}
-
-.background-alt-leaves {
-    background: url(/images/leaf.jpg);
-    background-size: cover;  /* Ensure the entire image is visible */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; /* Center the image in the container */
-}
-
-.background-alt-ForestWatch {
-    background: url(/images/forestWatch.jpg);
-    background-size: cover;  /* Ensure the entire image is visible */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; /* Center the image in the container */
+    background: #77db34
 }
 
 .background-alt {
@@ -235,18 +185,6 @@ footer {
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px
-}
-
-#lead-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(83, 172, 211, 0.63);
-    z-index: 1
 }
 
 #lead-down {
@@ -330,7 +268,7 @@ footer {
     right: auto;
     height: 100%;
     width: 3px;
-    background: #3498db;
+    background: #4a2c2a;
     z-index: 0
 }
 
@@ -339,8 +277,8 @@ footer {
     content: '';
     width: 3px;
     height: 40px;
-    background: #3498db;
-    background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
+    background: #4a2c2a;
+    background: linear-gradient(to bottom, #4a2c2a, rgba(52, 152, 219, 0));
     top: 100%;
     left: 303px
 }
@@ -348,7 +286,7 @@ footer {
 .vtimeline-content {
     margin-left: 350px;
     background: #fff;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #4a2c2a;
     padding: 15px;
     border-radius: 3px;
     text-align: left
@@ -387,12 +325,14 @@ footer {
     color: #fff;
     width: 50px;
     height: 50px;
-    background-size: cover;
+    background-size: cover; /* Ensures the background covers the element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     border-radius: 50%;
     float: left;
     z-index: 99;
     margin-left: 280px;
-    border: 1px solid #000000;  /* Optional: Border for styling */
+    border: 2px solid #77db34;  /* Optional: Border for styling */
 }
 
 .vtimeline-icon:hover {
@@ -424,7 +364,7 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid #dcd9d9;
+    border: 1px solid #4a2c2a;
     background: rgba(255, 255, 255, 0.7); 
     text-align: left;
 }
@@ -441,8 +381,16 @@ footer {
     float: right
 }
 
+.education-block hr {
+    border: 0;               
+    border-top: 1px solid #77db34; 
+    height: 2px;
+    width: 40px;    
+    margin: 10px 0;
+}
+
 .education-block h4 {
-    color: #374054;
+    color: #7e8890;
     clear: both;
     font-weight: 500;
     margin: 0 0 15px 0
@@ -450,7 +398,7 @@ footer {
 
 .education-block p, .education-block ul {
     margin: 0;
-    color: #374054;
+    color: #7e8890;
     font-size: 0.9em
 }
 
@@ -486,6 +434,7 @@ footer {
     overflow: hidden;
 }
 
+
 .project-image img {
     width: 100%;          /* Make the image fill the container's width */
     height: 100%;         /* Make the image fill the container's height */
@@ -497,7 +446,27 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 15px;
+    border: 1px solid#4a2c2a;
     flex: 1;              /* This allows the project-info to take up the remaining space */
+}
+
+.project-info ul {
+    color: #74808a;    
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.project-info li {
+    text-align: center;
+}
+
+.project-info hr {
+    border: 0;                  /* Remove default border */
+    height: 1px;                /* Set height of the line */
+    background-color: #dcd9d9;  /* Green color for the block */
+    width: 90%;                /* Make the block span the full width */
 }
 
 .project-info h3 {
@@ -544,7 +513,7 @@ footer {
     display: block;
     margin: 0 auto;
     padding: 0;
-    max-width: 800px
+    max-width: 800px;
 }
 
 #skills li {
@@ -553,83 +522,12 @@ footer {
     padding: 5px 10px;
     color: #374054;
     background: #e4e4ea;
+    border: 1px solid #4a2c2a;
     list-style: none;
     cursor: default;
-    font-size: 1.2em
-}
-
-#contact {
-    padding: 50px 15px;
-    background: #3498db;
-    text-align: center
-}
-
-#contact h2 {
-    margin: 0 0 15px 0;
-    color: #fff;
-    font-weight: 500
-}
-
-#contact-form {
-    max-width: 500px;
-    margin: 0 auto
-}
-
-#contact-form input, #contact-form textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    margin-bottom: 10px;
-    background: #1d6fa5;
-    color: #fff;
-    transition: .5s ease all
-}
-
-#contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {
-    color: #fff
-}
-
-#contact-form input:-moz-placeholder, #contact-form textarea:-moz-placeholder {
-    color: #fff;
-    opacity: 1
-}
-
-#contact-form input::-moz-placeholder, #contact-form textarea::-moz-placeholder {
-    color: #fff;
-    opacity: 1
-}
-
-#contact-form input:-ms-input-placeholder, #contact-form textarea:-ms-input-placeholder {
-    color: #fff
-}
-
-#contact-form input:focus, #contact-form textarea:focus {
-    outline: none;
-    background: #16527a
-}
-
-#contact-form textarea {
-    height: 150px;
-    resize: none
-}
-
-#contact-form button {
-    display: block;
-    width: 100%;
-    background: #fff;
-    border-radius: 4px;
-    padding: 5px 10px;
-    border: none;
-    color: #3498db;
-    font-weight: 700;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: .5s ease all
-}
-
-#contact-form button:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+    font-size: 1.2em;
+    position: relative;
+    overflow: hidden;
 }
 
 .optional-section {
